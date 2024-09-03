@@ -33,9 +33,7 @@
 </template>
 
 <script setup>
-import { reactive } from 'vue';
-
-const CONSTANTS_COMPANY = reactive({
+const CONSTANTS_COMPANY = {
   NAME: `(주)아뮤즈`,
   CEO: `이우진`,
   BUSINESS_NUM: `871-81-007755`,
@@ -43,7 +41,7 @@ const CONSTANTS_COMPANY = reactive({
   EMAIL: `amuz@amuz.co.kr`,
   PHONE: `02.1833.5770`,
   FAX: `070.7575.3852`,
-});
+};
 </script>
 
 <style lang="scss" scoped></style>
