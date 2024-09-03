@@ -8,6 +8,7 @@ export default {
     },
     colors: {
       background: '#171717',
+      white: '#fff',
       primary: '#104DF5',
       gray: '#707070',
     },
