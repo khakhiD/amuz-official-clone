@@ -5,6 +5,7 @@ export default {
     extend: {},
     fontFamily: {
       Pretendard: ['Pretendard'],
+      Poppins: ['Poppins'],
     },
     colors: {
       background: '#171717',
