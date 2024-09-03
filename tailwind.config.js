@@ -1,8 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./src/components/**/*.{html,js,ts,vue}'],
+  content: ['./index.html', './src/**/*.{vue,js,ts,tsx,jsx}'],
   theme: {
     extend: {},
+    fontFamily: {
+      Pretendard: ['Pretendard'],
+    },
   },
   variants: {
     extends: {},
