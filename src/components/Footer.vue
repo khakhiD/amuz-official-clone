@@ -1,7 +1,8 @@
 <template>
   <footer
     id="Footer"
-    class="max-w-7xl block mx-4 md:flex md:mx-20 md:justify-between md:items-end text-white pt-[50px] pb-[45px]">
+    class="max-w-7xl block mx-4 md:flex md:mx-20 md:justify-between md:items-end text-white pt-[50px] pb-[45px]"
+    :class="CSS_ANIMATION">
     <div id="Company" class="transition-all">
       <a href="">
         <div>amuz</div>
@@ -33,6 +34,8 @@
 </template>
 
 <script setup>
+import { ref } from 'vue';
+
 const CONSTANTS_COMPANY = {
   NAME: `(주)아뮤즈`,
   CEO: `이우진`,
@@ -42,6 +45,8 @@ const CONSTANTS_COMPANY = {
   PHONE: `02.1833.5770`,
   FAX: `070.7575.3852`,
 };
+
+const CSS_ANIMATION = ref('transition-all ease-in-out duration-500');
 </script>
 
 <style lang="scss" scoped></style>
