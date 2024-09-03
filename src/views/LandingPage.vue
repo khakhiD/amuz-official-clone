@@ -1,7 +1,12 @@
 <template>
-  <div></div>
+  <DefaultLayout>
+    <IdeaSection />
+  </DefaultLayout>
 </template>
 
-<script setup></script>
+<script setup>
+import DefaultLayout from '../layouts/DefaultLayout.vue';
+import IdeaSection from '../components/sections/IdeaSection.vue';
+</script>
 
 <style lang="scss" scoped></style>

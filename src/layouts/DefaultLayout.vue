@@ -3,6 +3,9 @@
     <!-- Header -->
     <Header />
     <!-- Main (Sections) -->
+    <main class="relative">
+      <slot />
+    </main>
     <!-- Footer -->
     <Footer />
   </div>
