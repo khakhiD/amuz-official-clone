@@ -1,8 +1,8 @@
 <template>
   <footer
     id="Footer"
-    class="max-w-[1200px] mx-auto flex justify-between items-end text-white pt-[50px] pb-[45px]">
-    <div id="Company" class="">
+    class="max-w-7xl block mx-4 md:flex md:mx-20 md:justify-between md:items-end text-white pt-[50px] pb-[45px]">
+    <div id="Company" class="transition-all">
       <a href="">
         <div>amuz</div>
         <p>{{ CONSTANTS_COMPANY.NAME }}</p>
