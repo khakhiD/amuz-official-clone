@@ -6,6 +6,11 @@ export default {
     fontFamily: {
       Pretendard: ['Pretendard'],
     },
+    colors: {
+      background: '#171717',
+      primary: '#104DF5',
+      gray: '#707070',
+    },
   },
   variants: {
     extends: {},
