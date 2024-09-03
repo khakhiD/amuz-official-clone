@@ -1,7 +1,16 @@
 <template>
-  <div></div>
+  <div class="relative min-h-screen bg-background">
+    <!-- Header -->
+    <Header />
+    <!-- Main (Sections) -->
+    <!-- Footer -->
+    <Footer />
+  </div>
 </template>
 
-<script setup></script>
+<script setup>
+import Header from '../components/Header.vue';
+import Footer from '../components/Footer.vue';
+</script>
 
 <style lang="scss" scoped></style>

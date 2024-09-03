@@ -3,10 +3,8 @@ import DefaultLayout from '../src/layouts/DefaultLayout.vue';
 </script>
 
 <template>
+  <small class="text-[36px] text-background font-extrabold">App.vue</small>
   <DefaultLayout />
-  <div>
-    <h1 class="text-[100px] font-extrabold">App.vue</h1>
-  </div>
 </template>
 
 <style scoped></style>
