@@ -1,31 +1,38 @@
+//padding: pt28px px16px pb24px;
+
 <template>
   <footer
     id="Footer"
-    class="max-w-7xl block mx-4 md:flex md:mx-20 md:justify-between md:items-end text-white pt-[50px] pb-[45px]"
+    class="max-w-7xl block mx-4 px-4 pt-7 pb-6 text-white md:flex md:mx-auto md:px-20 md:justify-between md:items-end md:pt-[49px] md:pb-[46px]"
     :class="CSS_ANIMATION">
-    <div id="Company" class="transition-all">
-      <a href="">
-        <div>amuz</div>
-        <p>{{ CONSTANTS_COMPANY.NAME }}</p>
+    <div id="company-info" class="flex flex-col transition-all">
+      <a href="/" class="mb-8">
+        <div class="flex gap-4 text-sm font-Pretendard font-bold">
+          <img src="/amuz/amuz01.png" alt="Amuz" class="h-[17px]" />
+          <p>{{ CONSTANTS_COMPANY.NAME }}</p>
+        </div>
       </a>
-      <ul>
-        <li>
+      <ul class="font-Pretendard mb-2 text-sm md:text-base">
+        <li class="flex gap-3 items-center">
           <span>대표자 : {{ CONSTANTS_COMPANY.CEO }}</span>
+          <span class="w-[1px] h-2 bg-gray" />
+          <span id="bording"
+            >사업자 등록 번호 : {{ CONSTANTS_COMPANY.BUSINESS_NUM }}</span
+          >
         </li>
         <li>
           <span>Location : {{ CONSTANTS_COMPANY.LOCATION }}</span>
         </li>
       </ul>
-      <small>
-        <ul>
-          <li>E-mail. {{ CONSTANTS_COMPANY.EMAIL }}</li>
-          <li>T. {{ CONSTANTS_COMPANY.PHONE }}</li>
-          <li>F. {{ CONSTANTS_COMPANY.FAX }}</li>
-        </ul>
-      </small>
+      <ul class="flex gap-6 font-Pretendard text-sm">
+        <!-- TODO small device에서 E-mail 다음 줄 바꿈 처리 -->
+        <li>E-mail. {{ CONSTANTS_COMPANY.EMAIL }}</li>
+        <li>T. {{ CONSTANTS_COMPANY.PHONE }}</li>
+        <li>F. {{ CONSTANTS_COMPANY.FAX }}</li>
+      </ul>
     </div>
-    <div id="SNS">
-      <ul class="flex gap-8 items-center">
+    <div id="official-sns" class="pt-6 md:pt-0">
+      <ul class="flex gap-4 md:gap-8 items-center text-sm md:text-base">
         <li>
           <a :href="SNS.BLOG.URL">
             <img :src="SNS.BLOG.IMG_URL" :alt="SNS.BLOG.ALT" />
