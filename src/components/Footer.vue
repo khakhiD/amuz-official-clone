@@ -1,5 +1,3 @@
-//padding: pt28px px16px pb24px;
-
 <template>
   <footer
     id="Footer"
