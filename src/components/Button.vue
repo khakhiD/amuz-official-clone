@@ -53,7 +53,7 @@ const ICON_BY_TYPE = {
   },
 };
 
-const { content, iconType, hasNoIcon, color, href } = props;
+const { content, iconType, hasNoIcon, href } = props;
 </script>
 
 <style lang="scss" scoped></style>
