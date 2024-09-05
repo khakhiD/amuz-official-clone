@@ -2,14 +2,14 @@
 <template>
   <a
     :href
-    class="flex relative items-end bg-repeat bg-center bg-cover w-full h-[380px] p-6 md:w-[50vw] md:h-[31vh] rounded-[5vw]"
+    class="flex relative items-end bg-repeat bg-center bg-cover w-full h-[380px] p-6 md:p-[3vw] md:w-[56vw] md:h-[31vw] rounded-[5vw]"
     :style="{ backgroundImage: `url(${imageSrc})` }">
     <div aria-label="info">
       <p class="text-sm">{{ category }}</p>
       <p class="text-lg md:text-[32px] mb-3 font-semibold break-keep">
         {{ title }}
       </p>
-      <p>{{ description }}</p>
+      <p class="md:hidden">{{ description }}</p>
     </div>
   </a>
 </template>
