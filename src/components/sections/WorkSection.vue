@@ -3,13 +3,13 @@
   <section
     class="flex h-auto md:h-screen items-center justify-center md:justify-normal overflow-hidden">
     <div class="w-full md:max-w-7xl px-4 md:px-20">
-      <h1
-        class="text-[32px] text-center md:text-8xl font-semibold md:font-medium mb-5 md:mb-[14px]">
+      <h2
+        class="uppercase font-Poppins text-[32px] text-center md:text-left md:text-8xl font-semibold md:font-medium mb-5 md:mb-[14px]">
         WORK ARCHIVE
-      </h1>
+      </h2>
       <div
         id="works-list"
-        class="flex flex-col w-full md:w-min gap-5 md:gap-[30px] m-0 md:m-auto">
+        class="flex flex-col md:flex-row w-full md:w-min gap-5 md:gap-[30px] m-0 md:m-auto">
         <!-- work items -->
         <WorkCard
           v-for="(work, index) in worksData"
