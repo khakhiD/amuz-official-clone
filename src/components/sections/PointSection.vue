@@ -3,7 +3,7 @@
     class="h-lvh flex items-center justify-center text-white py-6 px-4 md:max-w-7xl md:py-0 md:px-20 md:mx-auto">
     <div class="">
       <!-- for large screen -->
-      <h1 class="text-[26px] md:text-[53px] font-bold">
+      <h1 class="text-[26px] md:text-[53px] md:font-bold md:leading-relaxed">
         <span>
           {{ PRAISE_LINES.FIRST }}
           <img :src="IMAGES_URL.YELLOW" class="h-10 md:h-20 inline" />
