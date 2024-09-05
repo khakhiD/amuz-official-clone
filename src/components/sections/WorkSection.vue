@@ -14,9 +14,9 @@
           :key="index"
           v-bind="work" />
         <div
-          class="hidden relative md:flex md:flex-col md:justify-between md:w-[56vw] md:h-[31vw] md:pt-[3vw] md:pl-[3vw] md:pr-[3vw]">
+          class="hidden relative md:flex md:flex-col md:w-[56vw] md:h-[31vw] md:pt-[3vw] md:pl-[3vw] md:pr-[3vw]">
           <h3
-            class="text-start text-[56px] leading-relaxed font-semibold whitespace-pre-line">
+            class="text-start text-[56px] leading-relaxed font-semibold whitespace-pre-line md:mb-9">
             {{ VIEW_WORKS_TITLE }}
           </h3>
           <Button v-bind="buttonProps" />
