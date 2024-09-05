@@ -1,5 +1,7 @@
 <template>
-  <button class="group/btn transition-all duration-1000 ease-in-out max-h-fit">
+  <a
+    :href
+    class="group/btn transition-all duration-1000 ease-in-out max-h-fit cursor-pointer">
     <div
       class="align-middle md:max-h-[56px] py-3 px-[30px] border border-white rounded-[30px] inline-block group-hover/btn:bg-white transition duration-300">
       <span
@@ -21,7 +23,7 @@
           :alt="ICON_BY_TYPE.ARROW.ALT" />
       </div>
     </div>
-  </button>
+  </a>
 </template>
 
 <script setup lang="ts">
@@ -29,6 +31,7 @@ interface Props {
   content: string;
   color?: 'blue';
   hasNoIcon?: boolean;
+  href?: string;
   iconType?: 'arrow' | 'download';
 }
 
@@ -37,6 +40,7 @@ const props = withDefaults(defineProps<Props>(), {
   content: '버튼 이름',
   color: 'blue',
   hasNoIcon: false,
+  href: '',
   iconType: 'arrow',
 });
 
@@ -49,7 +53,7 @@ const ICON_BY_TYPE = {
   },
 };
 
-const { content, iconType, hasNoIcon, color } = props;
+const { content, iconType, hasNoIcon, color, href } = props;
 </script>
 
 <style lang="scss" scoped></style>
