@@ -12,13 +12,16 @@
           {{ PRAISE_LINES.THIRD }}
         </span>
       </h1>
-      <!-- common component: button -->
-      <button>About us</button>
+      <div class="flex justify-center mt-10">
+        <Button :content="buttonProps.content" :href="buttonProps.href" />
+      </div>
     </div>
   </secion>
 </template>
 
 <script setup>
+import Button from '../Button.vue';
+
 const PRAISE_LINES = {
   FIRST: '시작하는 기업은 잘할 수 있는',
   SECOND: '일을 즐겁게 하도록, 우리들은 우리가',
@@ -28,6 +31,11 @@ const PRAISE_LINES = {
 const IMAGES_URL = {
   YELLOW: '/amuz/amuz02.png',
   BLUE: '/amuz/amuz03.png',
+};
+
+const buttonProps = {
+  content: 'About us',
+  href: null,
 };
 </script>
 
