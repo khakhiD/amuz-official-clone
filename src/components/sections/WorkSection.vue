@@ -1,7 +1,6 @@
 <template>
-  <!-- NOTE: Work Archive Section -->
   <section
-    class="flex h-auto md:h-screen items-center justify-center md:justify-normal overflow-hidden">
+    class="flex h-auto md:h-screen items-center justify-center md:justify-normal">
     <div class="w-full md:max-w-7xl px-4 md:px-20">
       <h2
         class="uppercase font-Poppins text-[32px] text-center md:text-left md:text-8xl font-semibold md:font-medium mb-5 md:mb-[14px]">
@@ -9,12 +8,19 @@
       </h2>
       <div
         id="works-list"
-        class="flex flex-col md:flex-row w-full md:w-min gap-5 md:gap-[30px] m-0 md:m-auto">
-        <!-- work items -->
+        class="flex flex-col md:flex-row w-full md:w-min gap-5 md:gap-[30px] m-0 md:m-auto overflow-x-scroll">
         <WorkCard
           v-for="(work, index) in worksData"
           :key="index"
           v-bind="work" />
+        <div
+          class="hidden relative md:flex md:flex-col md:justify-between md:w-[56vw] md:h-[31vw] md:pt-[3vw] md:pl-[3vw] md:pr-[3vw]">
+          <h3
+            class="text-start text-[56px] leading-relaxed font-semibold whitespace-pre-line">
+            {{ VIEW_WORKS_TITLE }}
+          </h3>
+          <Button v-bind="buttonProps" />
+        </div>
       </div>
     </div>
   </section>
@@ -22,6 +28,10 @@
 
 <script setup>
 import WorkCard from '../WorkCard.vue';
+import Button from '../Button.vue';
+
+const VIEW_WORKS_TITLE = `Let's go view
+  Works.`;
 
 const worksData = [
   {
@@ -60,6 +70,11 @@ const worksData = [
     description: '100년 역사를 담고있는 첫 프리미엄 호텔 그랩 디 오션 송도',
   },
 ];
+
+const buttonProps = {
+  content: 'Works',
+  href: null,
+};
 </script>
 
 <style lang="scss" scoped></style>
