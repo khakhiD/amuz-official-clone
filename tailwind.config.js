@@ -8,7 +8,7 @@ export default {
       Poppins: ['Poppins'],
     },
     colors: {
-      background: '#171717',
+      background: '#1C1C1C',
       white: '#fff',
       primary: '#104DF5',
       gray: '#707070',
