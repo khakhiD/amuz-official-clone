@@ -2,7 +2,11 @@
 export default {
   content: ['./index.html', './src/**/*.{vue,js,ts,tsx,jsx}'],
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        'spin-slow': 'spin 60s linear infinite',
+      },
+    },
     fontFamily: {
       Pretendard: ['Pretendard'],
       Poppins: ['Poppins'],
@@ -12,6 +16,8 @@ export default {
       white: '#fff',
       primary: '#104DF5',
       gray: '#707070',
+      alphaGray: '#707070a8',
+      hoverGray: '#ffffffa8',
     },
   },
   variants: {
