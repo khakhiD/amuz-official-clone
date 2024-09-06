@@ -33,12 +33,12 @@
       <ul class="flex gap-4 md:gap-8 items-center text-sm md:text-base">
         <li>
           <a :href="SNS.BLOG.URL">
-            <img :src="SNS.BLOG.IMG_URL" :alt="SNS.BLOG.ALT" />
+            <img :src="SNS.BLOG.ICON_SRC" :alt="SNS.BLOG.ALT" />
           </a>
         </li>
         <li>
           <a :href="SNS.INSTAGRAM.URL">
-            <img :src="SNS.INSTAGRAM.IMG_URL" :alt="SNS.INSTAGRAM.ALT" />
+            <img :src="SNS.INSTAGRAM.ICON_SRC" :alt="SNS.INSTAGRAM.ALT" />
           </a>
         </li>
       </ul>
@@ -47,6 +47,9 @@
 </template>
 
 <script setup>
+import blogIcon from '../assets/blogIcon.svg';
+import instagramIcon from '../assets/instagramIcon.svg';
+
 const CONSTANTS_COMPANY = {
   NAME: '(주)아뮤즈',
   CEO: '이우진',
@@ -59,12 +62,12 @@ const CONSTANTS_COMPANY = {
 
 const SNS = {
   BLOG: {
-    IMG_URL: '/src/assets/blogIcon.svg',
+    ICON_SRC: blogIcon,
     URL: 'https://blog.naver.com/amuz_official',
     ALT: 'amuz official blog',
   },
   INSTAGRAM: {
-    IMG_URL: '/src/assets/instagramIcon.svg',
+    ICON_SRC: instagramIcon,
     URL: 'https://www.instagram.com/amuz_official/',
     ALT: 'amuz official instagram',
   },

@@ -27,6 +27,8 @@
 </template>
 
 <script setup lang="ts">
+import arrowIcon from '../assets/arrow.svg';
+
 interface Props {
   content: string;
   color?: 'blue';
@@ -47,7 +49,7 @@ const props = withDefaults(defineProps<Props>(), {
 // 아이콘 타입 - 확장 가능
 const ICON_BY_TYPE = {
   ARROW: {
-    SRC: '/src/assets/arrow.svg',
+    SRC: arrowIcon,
     ALT: 'Arrow Icon',
     BASECLASS: 'group-hover/btn:-rotate-45 transition duration-500 ease-in-out',
   },

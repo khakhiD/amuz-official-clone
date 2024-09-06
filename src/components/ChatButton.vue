@@ -13,8 +13,11 @@
 </template>
 
 <script setup>
-const ICON_SRC = '/src/assets/contact.svg';
-const ICON_HOVER_SRC = '/src/assets/contactHover.svg';
+import contactSvg from '../assets/contact.svg';
+import contactHoverSvg from '../assets/contactHover.svg';
+
+const ICON_SRC = contactSvg;
+const ICON_HOVER_SRC = contactHoverSvg;
 </script>
 
 <style lang="scss" scoped></style>
