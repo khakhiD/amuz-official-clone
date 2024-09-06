@@ -19,7 +19,6 @@ export const scrollFillText = (element: HTMLElement | null) => {
   });
 };
 
-// https://blog.jobins.jp/horizontal-scroll-animations-using-gsaps
 export const horizontalScrollParallax = (
   container: HTMLElement,
   items: HTMLElement[]
@@ -27,17 +26,15 @@ export const horizontalScrollParallax = (
   if (!container || !items) return;
 
   const containerWidth = container.scrollWidth;
-  const itemsWidth = items.reduce((acc, item) => acc + item.clientWidth, 0);
 
   gsap.to(items, {
-    xPercent: -100 * (itemsWidth / containerWidth),
+    xPercent: -100 * (items.length - 1),
     ease: 'none',
     scrollTrigger: {
       trigger: container,
-      start: 'top top',
+      pin: true,
       end: () => `+=${containerWidth}`,
       scrub: true,
-      pin: true,
       anticipatePin: 1,
     },
   });

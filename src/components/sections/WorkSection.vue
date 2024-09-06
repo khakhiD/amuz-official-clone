@@ -1,5 +1,6 @@
 <template>
   <section
+    ref="worksSection"
     class="flex h-auto md:h-screen items-center justify-center md:justify-normal">
     <div class="w-full md:max-w-7xl px-4 md:px-20">
       <h2
@@ -7,7 +8,7 @@
         WORK ARCHIVE
       </h2>
       <div
-        id="works-list"
+        ref="worksList"
         class="flex flex-col md:flex-row w-full md:w-min gap-5 md:gap-[30px] m-0 md:m-auto overflow-x-scroll">
         <WorkCard
           v-for="(work, index) in worksData"
@@ -26,9 +27,11 @@
   </section>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import WorkCard from '../WorkCard.vue';
 import Button from '../Button.vue';
+import { horizontalScrollParallax } from '../../utils/animations';
+import { ref, onMounted } from 'vue';
 
 const VIEW_WORKS_TITLE = `Let's go view
   Works.`;
@@ -75,6 +78,16 @@ const buttonProps = {
   content: 'Works',
   href: null,
 };
+
+const worksSection = ref<HTMLElement | null>(null);
+const worksList = ref<HTMLElement | null>(null);
+
+onMounted(() => {
+  if (worksSection.value && worksList.value) {
+    const cards = Array.from(worksList.value.children) as HTMLElement[];
+    horizontalScrollParallax(worksSection.value, cards);
+  }
+});
 </script>
 
 <style lang="scss" scoped></style>
