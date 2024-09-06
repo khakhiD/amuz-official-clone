@@ -2,24 +2,23 @@
   <section
     class="overflow-hidden h-[1202px] md:overflow-auto md:h-screen flex relative justify-center items-center">
     <!-- wrapper -->
-    <div class="max-w-[360px] m-h-[601px] w-[360px] margin-0 p-0">
-      <!-- scroll animation main -->
-      <div>
-        <!-- Box || Card Components -->
-        <!-- <div>SENDGO</div>
-        <div>CMS2.5</div>
-        <div>STOREUP</div>
-        <div>Rent-ve</div> -->
-      </div>
+    <div
+      class="flex flex-col items-center justify-center margin-0 p-0 text-center">
+      <!-- NOTE: 애니메이션 요소 -->
+      <div></div>
       <!-- background title & button -->
-      <div class="hidden">
-        <!-- for large screen -->
+      <div class="hidden md:block">
+        <h2
+          class="font-Poppins mb-[70px] text-[11vw] font-medium leading-[1.1]">
+          {{ TITLE_CONTENT }}
+        </h2>
       </div>
       <div class="md:hidden font-Poppins text-[56px] font-medium text-center">
         <h2
           v-for="(content, i) in smallTitleContent"
           :key="i"
-          class="whitespace-pre-line first:mb-[137px]">
+          :class="i ? 'mb-[10px]' : 'mb-[137px]'"
+          class="whitespace-pre-line">
           {{ content }}
         </h2>
       </div>
