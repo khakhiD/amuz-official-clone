@@ -15,7 +15,7 @@
       <div
         id="work-tooltip"
         v-if="isHovering"
-        :style="{ top: `${y}px`, left: `${x}px` }"
+        :style="{ top: `${position.y}px`, left: `${position.x}px` }"
         class="hidden md:block py-4 px-[30px] fixed max-w-fit bg-background rounded-[28px] bg-opacity-50 z-20 pointer-events-none transition duration-100 ease-out">
         <p class="font-medium whitespace-nowrap overflow-hidden">
           {{ description }}
@@ -26,7 +26,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { reactive, ref } from 'vue';
 
 interface Props {
   category: string;
@@ -39,13 +39,16 @@ interface Props {
 const props = defineProps<Props>();
 const { category, title, imageSrc, description, href } = props;
 
-const x = ref(0);
-const y = ref(0);
+const position = reactive({
+  x: 0,
+  y: 0,
+});
+
 const isHovering = ref(false);
 
 const onMouseMove = (e: MouseEvent) => {
-  x.value = e.clientX;
-  y.value = e.clientY;
+  position.x = e.clientX;
+  position.y = e.clientY;
   isHovering.value = true;
 };
 
