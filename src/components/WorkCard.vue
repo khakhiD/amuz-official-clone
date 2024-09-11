@@ -30,7 +30,7 @@
 <script setup lang="ts">
 import { reactive, ref } from 'vue';
 
-interface Props {
+export interface WorkCardProps {
   category: string;
   title: string;
   imageSrc?: string;
@@ -38,7 +38,7 @@ interface Props {
   description?: string;
 }
 
-const props = defineProps<Props>();
+const props = defineProps<WorkCardProps>();
 const { category, title, imageSrc, description, href } = props;
 
 const position = reactive({

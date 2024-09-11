@@ -9,13 +9,13 @@
 </template>
 
 <script setup lang="ts">
-interface Props {
+export interface ServiceBoxProps {
   title: string;
   subtitle?: string;
   imageSrc?: string;
 }
 
-const props = withDefaults(defineProps<Props>(), {
+const props = withDefaults(defineProps<ServiceBoxProps>(), {
   title: '서비스명',
   subtitle: '서비스 소개 문구',
   imageSrc: '/amuz/amuz12.png',

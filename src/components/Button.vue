@@ -29,7 +29,7 @@
 <script setup lang="ts">
 import arrowIcon from '../assets/arrow.svg';
 
-interface Props {
+export interface ButtonProps {
   content: string;
   color?: 'blue';
   hasNoIcon?: boolean;
@@ -38,7 +38,7 @@ interface Props {
 }
 
 // 기본 값을 가진 props 선언
-const props = withDefaults(defineProps<Props>(), {
+const props = withDefaults(defineProps<ButtonProps>(), {
   content: '버튼 이름',
   color: 'blue',
   hasNoIcon: false,
