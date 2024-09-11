@@ -152,7 +152,6 @@ export const spreadBox = (container: HTMLElement, boxes: HTMLElement[]) => {
           end: '+=1000',
           scrub: true,
           pin: true,
-          markers: true,
         },
       });
     }
