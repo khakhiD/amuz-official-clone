@@ -12,15 +12,17 @@
         {{ title }}
       </p>
       <p class="md:hidden">{{ description }}</p>
-      <div
-        id="work-tooltip"
-        v-if="isHovering"
-        :style="{ top: `${position.y}px`, left: `${position.x}px` }"
-        class="hidden md:block py-4 px-[30px] fixed max-w-fit bg-background rounded-[28px] bg-opacity-50 z-20 pointer-events-none transition duration-100 ease-out">
-        <p class="font-medium whitespace-nowrap overflow-hidden">
-          {{ description }}
-        </p>
-      </div>
+      <Teleport to="body">
+        <div
+          id="work-tooltip"
+          v-if="isHovering"
+          :style="{ top: `${position.y}px`, left: `${position.x}px` }"
+          class="hidden md:block py-4 px-[30px] fixed max-w-fit bg-background rounded-[28px] bg-opacity-50 z-20 pointer-events-none transition duration-100 ease-out">
+          <p class="font-medium whitespace-nowrap overflow-hidden">
+            {{ description }}
+          </p>
+        </div>
+      </Teleport>
     </div>
   </a>
 </template>
