@@ -2,6 +2,7 @@ import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
+const mm = gsap.matchMedia();
 
 export const scrollFillText = (element: HTMLElement | null) => {
   if (!element) return;
@@ -25,17 +26,27 @@ export const horizontalScrollParallax = (
 ) => {
   if (!container || !items) return;
 
-  const containerWidth = container.scrollWidth;
+  mm.add({ isLarge: '(min-width: 767px)' }, (context) => {
+    let { isLarge } = context.conditions;
 
-  gsap.to(items, {
-    xPercent: -100 * (items.length - 1),
-    ease: 'none',
-    scrollTrigger: {
-      trigger: container,
-      pin: true,
-      end: () => `+=${containerWidth}`,
-      scrub: true,
-      anticipatePin: 1,
-    },
+    if (isLarge) {
+      const containerWidth = container.scrollWidth;
+
+      gsap.to(items, {
+        xPercent: -100 * (items.length - 1),
+        ease: 'none',
+        scrollTrigger: {
+          trigger: container,
+          pin: true,
+          end: () => `+=${containerWidth}`,
+          scrub: true,
+          anticipatePin: 1,
+        },
+      });
+    }
+
+    return () => {
+      ScrollTrigger.killAll();
+    };
   });
 };
