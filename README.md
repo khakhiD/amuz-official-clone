@@ -14,67 +14,36 @@
 
 <div align="center">
 <pre>
-
 아뮤즈 플랫폼 서비스팀 인턴십 첫 과제
-**[아뮤즈 공식 홈페이지](https://amuz.co.kr) 랜딩 페이지 클로닝하기**
-
+<strong><a href="https://amuz.co.kr/" target="_blank">아뮤즈 공식 홈페이지</a> 랜딩 페이지 클로닝하기</strong>
 </pre>
 </div>
 
-### 목표
+<br />
 
-Vue.js의 선언적인 UI 개발 방법을 익힙니다.
+### 목표
+**Vue.js의 선언적인 프론트엔드 UI 개발** 방법을 익히기
+
+<br />
 
 ### 요구사항 분석
-
 **실제 공식 페이지에 적용된 기술**
-
 - Vue, React, inertia.js
 - tailwindcss, styled-components, GSAP
 - swiper, lenis, axios
 - channel.io
 - webpack
 
-<br>
+<br />
 
-**클로닝에 사용할 기술**
-
+**클로닝에 사용한 기술**
 - Vue, Typescript
 - tailwindcss, GSAP
 - vite
 
-### DOM 구조 예상
-
-- header
-  - menu modal
-- main
-  - section1. Idea
-  - section2. Point
-  - section3. Work
-  - section4. Service
-  - section5. Contact
-  - fixed conatact button
-- footer
-
-### 컴포넌트 추출
-
-- Button
-- WorkCard
-- ServiceBox
-- Header
-- Footer
-- ChatButton
-
-### 섹션 추출
-
-- IdeaSection.vue
-- PointSection.vue
-- WorkSection.vue
-- SolutionSection.vue
-- ContactSection.vue
+<br />
 
 ### 디렉터리 구조
-
 ```plain
 src
  ┣ assets
