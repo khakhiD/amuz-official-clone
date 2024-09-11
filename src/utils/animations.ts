@@ -9,19 +9,52 @@ const screen = {
   isSmall: '(max-width: 767px)',
 };
 
-export const scrollFillText = (element: HTMLElement | null) => {
+export const fillTextColor = (element: HTMLElement | null) => {
   if (!element) return;
-  gsap.set(element, { clipPath: 'inset(0 100% 0 0)' });
 
-  gsap.to(element, {
-    scrollTrigger: {
-      trigger: element,
-      start: 'top 80%',
-      end: 'bottom 20%',
-      scrub: true,
-    },
-    clipPath: 'inset(0 0 0 0)',
-    ease: 'none',
+  gsap.set(element, {
+    backgroundClip: 'text',
+    webkitBackgroundClip: 'text',
+    webkitTextFillColor: 'rgba(255, 255, 255, 0.1)',
+    backgroundRepeat: 'no-repeat',
+    backgroundImage: 'linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255))',
+    backgroundSize: '0% 100%',
+  });
+
+  mm.add(screen, (context) => {
+    const { isLarge, isSmall } = context.conditions;
+
+    if (isLarge) {
+      gsap.to(element, {
+        backgroundSize: '100% 100%',
+        duration: 3,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: element,
+          start: 'top 80%',
+          end: 'bottom 50%',
+          scrub: true,
+        },
+      });
+    }
+
+    if (isSmall) {
+      gsap.to(element, {
+        backgroundSize: '100% 100%',
+        duration: 3,
+        ease: 'power2.inOut',
+        scrollTrigger: {
+          trigger: element,
+          start: 'top 100%',
+          end: 'bottom 35%',
+          scrub: true,
+        },
+      });
+    }
+
+    return () => {
+      ScrollTrigger.killAll();
+    };
   });
 };
 
