@@ -100,10 +100,13 @@ export const spreadBox = (container: HTMLElement, boxes: HTMLElement[]) => {
       const containerHeight = container.clientHeight;
       const totalBoxes = boxes.length;
 
-      gsap.to(boxes, {
-        y: (i: number) => {
-          return i === totalBoxes - 1 ? 0 : -containerHeight;
-        },
+      gsap.set(boxes, {
+        x: '-50%',
+        y: '-50%',
+      });
+
+      gsap.to(boxes.slice(0, totalBoxes - 1), {
+        y: -containerHeight,
         duration: 1,
         ease: 'power2.out',
         stagger: {
