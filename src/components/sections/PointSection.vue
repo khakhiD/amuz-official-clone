@@ -4,7 +4,7 @@
     <div class="">
       <!-- for large screen -->
       <h1 class="text-[26px] md:text-[53px] md:font-bold md:leading-relaxed">
-        <span>
+        <span ref="textElementRef">
           {{ PRAISE_LINES.FIRST }}
           <img :src="IMAGES_URL.YELLOW" class="h-10 md:h-20 inline" />
           {{ PRAISE_LINES.SECOND }}
@@ -20,7 +20,9 @@
 </template>
 
 <script setup>
+import { onMounted, ref } from 'vue';
 import Button from '../Button.vue';
+import { fillTextColor } from '../../utils/animations';
 
 const PRAISE_LINES = {
   FIRST: '시작하는 기업은 잘할 수 있는',
@@ -37,6 +39,12 @@ const buttonProps = {
   content: 'About us',
   href: null,
 };
+
+const textElementRef = ref(null);
+
+onMounted(() => {
+  fillTextColor(textElementRef.value);
+});
 </script>
 
 <style lang="scss" scoped></style>
