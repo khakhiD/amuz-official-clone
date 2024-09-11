@@ -19,11 +19,14 @@
 </pre>
 </div>
 
+<br />
+
 ### 목표
 **Vue.js의 선언적인 프론트엔드 UI 개발** 방법을 익히기
 
-### 요구사항 분석
+<br />
 
+### 요구사항 분석
 **실제 공식 페이지에 적용된 기술**
 - Vue, React, inertia.js
 - tailwindcss, styled-components, GSAP
@@ -31,12 +34,14 @@
 - channel.io
 - webpack
 
-<br>
+<br />
 
 **클로닝에 사용한 기술**
 - Vue, Typescript
 - tailwindcss, GSAP
 - vite
+
+<br />
 
 ### 디렉터리 구조
 ```plain
