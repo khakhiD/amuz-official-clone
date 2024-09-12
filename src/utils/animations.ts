@@ -161,3 +161,31 @@ export const spreadBox = (container: HTMLElement, boxes: HTMLElement[]) => {
     };
   });
 };
+
+export const textFillAndSpacing = (element: HTMLElement | null) => {
+  if (!element) return;
+
+  gsap.set(element, {
+    letterSpacing: '1.5vw',
+    backgroundClip: 'text',
+    webkitBackgroundClip: 'text',
+    webkitTextFillColor: 'rgba(255, 255, 255, 0.1)',
+    backgroundRepeat: 'no-repeat',
+    backgroundImage: 'linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255))',
+    backgroundSize: '0% 100%',
+  });
+
+  const tl = gsap.timeline();
+
+  tl.to(element, {
+    backgroundSize: '100% 100%',
+    duration: 1,
+    ease: 'power2.inOut',
+  });
+
+  tl.to(element, {
+    letterSpacing: '0',
+    duration: 0.5,
+    ease: 'power2.inOut',
+  });
+};
