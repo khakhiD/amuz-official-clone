@@ -195,3 +195,33 @@ export const textFillAndSpacing = (element: HTMLElement | null) => {
     ease: 'power2.inOut',
   });
 };
+
+export const expandIcons = (
+  container: HTMLElement,
+  iconContainer: HTMLElement
+) => {
+  if (!container || !iconContainer) return;
+
+  gsap.set(iconContainer, {
+    scale: 0.1,
+    filter: 'brightness(10%)',
+  });
+
+  gsap.to(iconContainer, {
+    duration: 1,
+    scale: 1,
+    filter: 'brightness(100%)',
+    ease: 'power2.inOut',
+    scrollTrigger: {
+      trigger: container,
+      start: 'center center',
+      end: '+=3000',
+      scrub: true,
+      pin: true,
+    },
+  });
+
+  return () => {
+    ScrollTrigger.killAll();
+  };
+};
