@@ -10,24 +10,27 @@
           <p>{{ CONSTANTS_COMPANY.NAME }}</p>
         </div>
       </a>
-      <ul class="font-Pretendard mb-2 text-sm md:text-base">
+      <ul
+        class="flex flex-col gap-2 md:gap-0 font-Pretendard mb-2 text-sm md:text-base">
         <li class="flex gap-3 items-center">
           <span>대표자 : {{ CONSTANTS_COMPANY.CEO }}</span>
           <span class="w-[1px] h-2 bg-gray" />
-          <span id="bording"
-            >사업자 등록 번호 : {{ CONSTANTS_COMPANY.BUSINESS_NUM }}</span
-          >
+          <span>사업자 등록번호 : {{ CONSTANTS_COMPANY.BUSINESS_NUM }}</span>
         </li>
         <li>
-          <span>Location : {{ CONSTANTS_COMPANY.LOCATION }}</span>
+          <span>Location. {{ CONSTANTS_COMPANY.LOCATION }}</span>
         </li>
       </ul>
-      <ul class="flex gap-6 font-Pretendard text-sm">
-        <!-- TODO small device에서 E-mail 다음 줄 바꿈 처리 -->
-        <li>E-mail. {{ CONSTANTS_COMPANY.EMAIL }}</li>
-        <li>T. {{ CONSTANTS_COMPANY.PHONE }}</li>
-        <li>F. {{ CONSTANTS_COMPANY.FAX }}</li>
-      </ul>
+      <div
+        class="flex flex-col md:flex-row gap-2 md:gap-6 font-Pretendard text-sm">
+        <p>E-mail. {{ CONSTANTS_COMPANY.EMAIL }}</p>
+        <p class="hidden md:block">T. {{ CONSTANTS_COMPANY.PHONE }}</p>
+        <p class="hidden md:block">F. {{ CONSTANTS_COMPANY.FAX }}</p>
+        <div class="flex md:hidden gap-8">
+          <p>T. {{ CONSTANTS_COMPANY.PHONE }}</p>
+          <p>F. {{ CONSTANTS_COMPANY.FAX }}</p>
+        </div>
+      </div>
     </div>
     <div id="official-sns" class="pt-6 md:pt-0">
       <ul class="flex gap-4 md:gap-8 items-center text-sm md:text-base">
@@ -53,7 +56,7 @@ import instagramIcon from '../assets/instagramIcon.svg';
 const CONSTANTS_COMPANY = {
   NAME: '(주)아뮤즈',
   CEO: '이우진',
-  BUSINESS_NUM: '871-81-007755',
+  BUSINESS_NUM: '871-81-00755',
   LOCATION: '부산광역시 부산진구 중앙대로 623, 3F~4F',
   EMAIL: 'amuz@amuz.co.kr',
   PHONE: '02.1833.5770',
