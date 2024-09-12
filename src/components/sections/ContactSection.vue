@@ -39,11 +39,11 @@ const ICONS = [
   { imageSrc: '/amuz/amuz18.png', baseClass: 'top-0 right-[10%] scale-[2.0]' },
   {
     imageSrc: '/amuz/amuz19.png',
-    baseClass: 'right-[10%] top-[20%] scale-[0.8]',
+    baseClass: 'right-[10%] top-[30%] scale-[0.8]',
   },
   {
     imageSrc: '/amuz/amuz20.png',
-    baseClass: 'right-[10%] bottom-[20%] scale-[0.5]',
+    baseClass: 'right-[5%] bottom-[15%] scale-[0.5]',
   },
   {
     imageSrc: '/amuz/amuz21.png',
