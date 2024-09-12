@@ -1,12 +1,9 @@
 <template>
   <div class="relative min-h-screen bg-background">
-    <!-- Header -->
     <Header />
-    <!-- Main (Sections) -->
     <main class="relative">
       <slot />
     </main>
-    <!-- Footer -->
     <Footer />
   </div>
 </template>
@@ -15,5 +12,3 @@
 import Header from '../components/Header.vue';
 import Footer from '../components/Footer.vue';
 </script>
-
-<style lang="scss" scoped></style>
