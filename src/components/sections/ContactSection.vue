@@ -50,7 +50,6 @@ const titleRef = ref<HTMLElement | null>(null);
 
 onMounted(() => {
   if (titleRef.value) {
-    console.log(titleRef);
     textFillAndSpacing(titleRef.value);
   }
 });
