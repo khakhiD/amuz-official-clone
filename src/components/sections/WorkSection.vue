@@ -1,7 +1,7 @@
 <template>
   <section
     ref="worksSection"
-    class="flex h-auto md:h-screen items-center justify-center md:justify-normal">
+    class="flex overflow-hidden h-auto md:h-screen items-center justify-center md:justify-normal">
     <div class="w-full md:max-w-7xl px-4 md:px-20">
       <h2
         class="uppercase font-Poppins text-[32px] text-center md:text-left md:text-8xl font-semibold md:font-medium mb-5 md:mb-[14px]">

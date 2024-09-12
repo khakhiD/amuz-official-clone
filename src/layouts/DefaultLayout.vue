@@ -1,5 +1,5 @@
 <template>
-  <div class="relative min-h-screen bg-background overflow-hidden">
+  <div class="relative min-h-screen bg-background">
     <!-- Header -->
     <Header />
     <!-- Main (Sections) -->
