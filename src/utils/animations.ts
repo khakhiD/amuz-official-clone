@@ -175,7 +175,13 @@ export const textFillAndSpacing = (element: HTMLElement | null) => {
     backgroundSize: '0% 100%',
   });
 
-  const tl = gsap.timeline();
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: element,
+      start: 'top 80%',
+      end: 'bottom 20%',
+    },
+  });
 
   tl.to(element, {
     backgroundSize: '100% 100%',
