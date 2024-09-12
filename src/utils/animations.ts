@@ -161,23 +161,3 @@ export const spreadBox = (container: HTMLElement, boxes: HTMLElement[]) => {
     };
   });
 };
-
-export const expandIcons = (elements: HTMLElement[] | null) => {
-  if (!elements) return;
-
-  gsap.fromTo(
-    elements,
-    { opacity: 0, y: 50 },
-    { opacity: 1, y: 0, stagger: 0.2, duration: 1, ease: 'power2.out' }
-  );
-};
-
-export const expandTitle = (element: HTMLElement | null) => {
-  if (!element) return;
-
-  gsap.fromTo(
-    element,
-    { opacity: 0, scale: 0.9 },
-    { opacity: 1, scale: 1, duration: 1, ease: 'power2.out' }
-  );
-};
